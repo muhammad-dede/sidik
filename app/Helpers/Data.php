@@ -9,6 +9,7 @@ use App\Models\Kecamatan;
 use App\Models\Kelurahan;
 use App\Models\Pendidikan;
 use App\Models\Pengaturan;
+use App\Models\Perusahaan;
 use App\Models\Produk;
 use App\Models\Provinsi;
 use App\Models\SatuanProduksi;
@@ -89,5 +90,11 @@ function kategoriProduk()
 function produk()
 {
     $data = Produk::orderBy('nama', 'asc')->get();
+    return $data;
+}
+
+function perusahaan()
+{
+    $data = Perusahaan::orderBy('nama_perusahaan', 'asc')->get();
     return $data;
 }

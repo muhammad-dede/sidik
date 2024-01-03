@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('ikm', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->uuid('id_perusahaan')->nullable()->index();
-            $table->string('kbli_pirt')->nullable()->unique();
             $table->unsignedBigInteger('id_produk')->nullable()->index();
+            $table->uuid('id_perusahaan')->nullable()->index();
+            $table->string('kbli_pirt')->nullable();
             $table->double('harga_jual')->nullable();
             $table->integer('tenaga_kerja')->nullable();
             $table->double('nilai_investasi')->nullable();
