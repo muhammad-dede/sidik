@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\BadanUsaha;
+use App\Models\Ikm;
 use App\Models\Jabatan;
 use App\Models\JenisKelamin;
 use App\Models\KabKota;
@@ -14,6 +15,7 @@ use App\Models\Produk;
 use App\Models\Provinsi;
 use App\Models\SatuanProduksi;
 use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\DB;
 
 function pengaturan()
 {
@@ -96,5 +98,16 @@ function produk()
 function perusahaan()
 {
     $data = Perusahaan::orderBy('nama_perusahaan', 'asc')->get();
+    return $data;
+}
+
+function countProduk($id_kategori)
+{
+    $data = Produk::join('ikm', 'ikm.id_produk', '=', 'produk.id')
+        ->groupBy('ikm.id_produk')
+        ->whereHas('kategoriProduk', function ($query) use ($id_kategori) {
+            $query->where('id_kategori_produk', $id_kategori);
+        })->count();
+
     return $data;
 }

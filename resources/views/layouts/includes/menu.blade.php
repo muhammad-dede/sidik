@@ -4,7 +4,7 @@
             <li class="nav-item me-auto">
                 <a class="navbar-brand" href="{{ route('home') }}">
                     <span class="brand-logo">
-                        <img src="{{ asset('') }}logo.png" alt="" class="w-100">
+                        <img src="{{ asset('') }}logo-1.png" alt="" class="w-100">
                     </span>
                     <h2 class="brand-text">
                         SIDIK

@@ -13,10 +13,18 @@ use App\Http\Controllers\PerusahaanController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\SatuanProduksiController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WebController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::controller(WebController::class)->group(function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/produk-ikm', 'produkIkm')->name('produk-ikm');
+    Route::get('/produk-ikm/{id}', 'produkIkmDetail')->name('produk-ikm.detail');
+    Route::get('/kontak', 'kontak')->name('kontak');
 });
 
 Route::controller(AuthController::class)->group(function () {

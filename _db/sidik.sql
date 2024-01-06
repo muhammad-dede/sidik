@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 03 Des 2023 pada 06.55
+-- Waktu pembuatan: 06 Jan 2024 pada 04.26
 -- Versi server: 8.0.30
 -- Versi PHP: 8.1.10
 
@@ -90,7 +90,8 @@ CREATE TABLE `ikm` (
 --
 
 INSERT INTO `ikm` (`id`, `id_perusahaan`, `kbli_pirt`, `id_produk`, `harga_jual`, `tenaga_kerja`, `nilai_investasi`, `jumlah_produksi`, `id_satuan_produksi`, `nilai_produksi`, `nilai_bb_bp`, `export`, `keterangan`, `image_primary`, `image_secondary`, `created_at`, `updated_at`) VALUES
-('9ac20a29-de2d-4538-99cc-56822eee3157', '9ac103c5-a97c-468b-9283-dc365ac03447', '22220', 1, 10000, 2, 120000, 150000, 3, 150000, 27312, 23, 'ini keterangan', 'http://sidik.test/uploads/829da774-95d2-4854-95e2-6b2bc8c25e99.png', 'http://sidik.test/uploads/d0ac9d59-eaa0-4f61-be90-82d5683c412d.png', '2023-12-03 05:37:28', '2023-12-03 05:56:26');
+('9ac20a29-de2d-4538-99cc-56822eee3157', '9ac103c5-a97c-468b-9283-dc365ac03447', '22220', 1, 10000, 2, 120000, 150000, 3, 150000, 27312, 23, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'http://sidik.test/uploads/829da774-95d2-4854-95e2-6b2bc8c25e99.png', 'http://sidik.test/uploads/d0ac9d59-eaa0-4f61-be90-82d5683c412d.png', '2023-12-03 05:37:28', '2023-12-03 05:56:26'),
+('9b05548a-fd1d-4501-9fc1-310ac3a59771', '9b055323-41ec-43df-9cd7-72c4a99840e6', '22223', 3, 150000, 2, 150000, 200, 11, 0, 0, 0, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'http://sidik.test/uploads/40fdce5a-fdff-4abc-a65c-453f374d445c.jpg', 'http://sidik.test/uploads/7b942157-4a7d-40a1-a548-e80abb2bb59b.jpg', '2024-01-05 16:25:55', '2024-01-05 16:25:55');
 
 -- --------------------------------------------------------
 
@@ -91732,7 +91733,8 @@ CREATE TABLE `perusahaan` (
 --
 
 INSERT INTO `perusahaan` (`id`, `nama_perusahaan`, `nama_pemilik`, `no_telp`, `id_jenis_kelamin`, `usia`, `id_pendidikan`, `id_jabatan`, `alamat`, `id_kelurahan`, `id_kecamatan`, `id_kab_kota`, `id_provinsi`, `latitude`, `longitude`, `id_badan_usaha`, `tahun_izin`, `created_at`, `updated_at`) VALUES
-('9ac103c5-a97c-468b-9283-dc365ac03447', 'Sabar Menunggu', 'Turmudi', '085920604200', 'L', 50, '5', 1, 'Link. Pasar Bunder RT.04/02', '3672011003', '367201', '3672', '36', '-6.012890191720', '106.04302237377', 1, 2022, '2023-12-02 17:23:46', '2023-12-02 17:23:46');
+('9ac103c5-a97c-468b-9283-dc365ac03447', 'Sabar Menunggu', 'Turmudi', '085920604200', 'L', 50, '5', 1, 'Link. Pasar Bunder RT.04/02', '3672011003', '367201', '3672', '36', '-6.012890191720', '106.04302237377', 1, 2022, '2023-12-02 17:23:46', '2023-12-02 17:23:46'),
+('9b055323-41ec-43df-9cd7-72c4a99840e6', 'Kartini', 'Uhyan Ruhyana', '085216839227', 'P', 12, '4', 1, 'Letjend R. Suprapto RT 10/04', '3672071001', '367207', '3672', '36', '-6.006902609165', '106.03109448439', 1, 2021, '2024-01-05 16:21:59', '2024-01-05 16:21:59');
 
 -- --------------------------------------------------------
 
@@ -91753,7 +91755,8 @@ CREATE TABLE `produk` (
 
 INSERT INTO `produk` (`id`, `nama`, `slug`, `id_kategori_produk`) VALUES
 (1, 'Kue Kering', 'kue-kering', 1),
-(2, 'Fotocopy', 'fotocopy', 2);
+(2, 'Fotocopy', 'fotocopy', 2),
+(3, 'Furniture', 'furniture', 3);
 
 -- --------------------------------------------------------
 
@@ -92124,7 +92127,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `roles`
